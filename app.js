@@ -29,7 +29,7 @@ async function fetchSecrets() {
     const secret = JSON.parse(response.SecretString);
     return secret;
   } catch (error) {
-    console.error("Error fetching secrets:", error);
+    console.error("Error in fetching secrets : ", error);
     throw error;
   }
 }
