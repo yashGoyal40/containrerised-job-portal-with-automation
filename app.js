@@ -48,6 +48,10 @@ const app = express();
 async function initializeApp() {
   await setEnvFromSecrets(); 
 
+  app.get('/health', (req, res) => {
+    res.status(200).send('OK');
+  });
+  
 
   app.use(
     cors({
