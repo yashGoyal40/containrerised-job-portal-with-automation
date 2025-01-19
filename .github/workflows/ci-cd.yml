@@ -51,6 +51,6 @@ jobs:
         run: |
           aws ecs update-service \
             --cluster jobportal-ecs-cluster \
-            --service jobportal-backend-service \
+            --service jobportal-ecs-service \
             --force-new-deployment \
             --region ${{ secrets.AWS_REGION }}
